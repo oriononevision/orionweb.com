@@ -20,8 +20,8 @@ export default function Footer() {
               <OrionLogo markSize={22} />
             </Link>
             <p className="footer__tagline">
-              L’écosystème pour connecter, comprendre, construire et créer —
-              Core, Intelligence, Build, Studio et Platform.
+              L’écosystème pour connecter, partager, comprendre, construire et créer —
+              Core, Transfer, Intelligence, Build, Studio et Platform.
             </p>
             <div className="footer__cta-row">
               <Link to="/commencer" className="btn btn--white btn--sm">

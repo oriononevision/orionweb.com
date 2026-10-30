@@ -1,3 +1,8 @@
+import {
+  CORE_DESKTOP_DOWNLOAD,
+  TRANSFER_DESKTOP_DOWNLOAD,
+} from '../lib/downloads'
+
 export type ProductFeature = {
   title: string
   text: string
@@ -42,7 +47,7 @@ export const products: Product[] = [
       (typeof import.meta !== 'undefined' &&
         (import.meta.env.VITE_CORE_URL as string | undefined)) ||
       'https://orion-core-app.vercel.app',
-    downloadUrl: '/downloads/ORION-Core-Setup-0.1.0.exe',
+    downloadUrl: CORE_DESKTOP_DOWNLOAD,
     audience: 'Équipes opérations, direction, support et toute organisation multi-outils.',
     promise: 'Une seule interface pour voir, chercher et agir sur l’ensemble de votre activité.',
     features: [
@@ -102,10 +107,75 @@ export const products: Product[] = [
     ],
     integrations: ['Gmail', 'Notion', 'Google Drive', 'HubSpot', 'Slack', 'Calendriers'],
     specs: [
-      { label: 'Accès', value: 'Web + application desktop via Platform' },
+      { label: 'Accès', value: 'Web + application desktop Windows' },
       { label: 'Déploiement', value: 'Cloud ORION / options Entreprise' },
       { label: 'Sécurité', value: 'Rôles, espaces, journal d’accès' },
       { label: 'Crédits IA', value: 'Non requis (sauf assistants liés)' },
+    ],
+  },
+  {
+    id: 'transfer',
+    tag: 'ORION TRANSFER',
+    title: 'Envoyer fichiers, dossiers et code',
+    text: 'Partagez des fichiers jusqu’à 1 Go, des dossiers entiers, et collaborez sur du code dans l’application bureau.',
+    longText:
+      'ORION Transfer sécurise l’envoi de fichiers et de dossiers. Sur le logiciel PC, vous ouvrez aussi des projets code natifs, invitez des coéquipiers et travaillez dans un IDE intégré — avec le même compte ORION que Core.',
+    points: ['Fichiers jusqu’à 1 Go', 'Dossiers structurés', 'Code partagé (PC)'],
+    icon: '/images/icon-centralisez.png',
+    cta: 'Découvrir Transfer',
+    downloadName: 'ORION Transfer',
+    webUrl:
+      (typeof import.meta !== 'undefined' &&
+        (import.meta.env.VITE_TRANSFER_URL as string | undefined)) ||
+      'https://orion-transfer.vercel.app',
+    downloadUrl: TRANSFER_DESKTOP_DOWNLOAD,
+    audience: 'Équipes qui envoient des livrables, des dossiers de travail ou du code.',
+    promise: 'Un envoi simple sur le web, et toute la puissance code/dossiers sur le logiciel PC.',
+    features: [
+      {
+        title: 'Envoi sécurisé',
+        text: 'Transférez jusqu’à 1 Go par envoi, avec destinataires par e-mail et suivi du statut.',
+      },
+      {
+        title: 'Dossiers complets',
+        text: 'Conservez l’arborescence pour livrer un projet ou un pack de fichiers cohérent.',
+      },
+      {
+        title: 'Code partagé (desktop)',
+        text: 'Ouvrez un dossier local, collaborez et éditez dans l’IDE intégré du logiciel Transfer.',
+      },
+      {
+        title: 'Même compte ORION',
+        text: 'Connexion Google ou e-mail partagée avec Core — une identité pour tout l’écosystème.',
+      },
+    ],
+    benefits: [
+      'Moins d’outils tiers pour les gros envois',
+      'Code et fichiers au même endroit sur PC',
+      'Onboarding clair avant la première connexion',
+      'Cohérence avec le reste d’ORION',
+    ],
+    useCases: [
+      {
+        title: 'Livraison client',
+        text: 'Envoyer un dossier de livrables ou une archive de travail en un lien.',
+      },
+      {
+        title: 'Équipe tech',
+        text: 'Partager un projet code et itérer ensemble dans le logiciel bureau.',
+      },
+      {
+        title: 'Opérations',
+        text: 'Circuler des packs de fichiers structurés sans e-mail saturé.',
+      },
+    ],
+    modules: ['Fichiers', 'Dossiers', 'Code (PC)', 'Invitations', 'Compte ORION'],
+    integrations: ['Core', 'Google', 'E-mail'],
+    specs: [
+      { label: 'Accès', value: 'Web + application desktop Windows' },
+      { label: 'Taille max', value: '1 Go par transfert' },
+      { label: 'Code IDE', value: 'Réservé au logiciel PC' },
+      { label: 'Compte', value: 'Identique à ORION Core' },
     ],
   },
   {
