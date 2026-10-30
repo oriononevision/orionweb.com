@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
 import { OrionLogo } from './OrionLogo'
 import { products } from '../data/products'
-import { CORE_DESKTOP_DOWNLOAD, CORE_DESKTOP_LABEL } from '../lib/downloads'
+import {
+  CORE_DESKTOP_DOWNLOAD,
+  CORE_DESKTOP_LABEL,
+  TRANSFER_DESKTOP_DOWNLOAD,
+  TRANSFER_DESKTOP_LABEL,
+} from '../lib/downloads'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -91,6 +96,11 @@ export default function Footer() {
                 <li>
                   <a href={CORE_DESKTOP_DOWNLOAD} download>
                     {CORE_DESKTOP_LABEL}
+                  </a>
+                </li>
+                <li>
+                  <a href={TRANSFER_DESKTOP_DOWNLOAD} download>
+                    {TRANSFER_DESKTOP_LABEL}
                   </a>
                 </li>
                 <li>
