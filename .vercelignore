@@ -1,0 +1,6 @@
+﻿# Installateurs trop lourds pour Vercel (hébergés sur GitHub Releases)
+public/downloads/*.exe
+public/downloads/*.blockmap
+dist/downloads/*.exe
+**/*.exe
+**/*.blockmap
