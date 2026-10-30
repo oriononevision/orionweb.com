@@ -1,6 +1,6 @@
 /** Versions desktop publiées (GitHub Releases). */
-export const CORE_DESKTOP_VERSION = '0.1.0'
-export const TRANSFER_DESKTOP_VERSION = '0.1.0'
+export const CORE_DESKTOP_VERSION = '0.1.1'
+export const TRANSFER_DESKTOP_VERSION = '0.1.1'
 
 const CORE_RELEASE_DEFAULT = `https://github.com/oriononevision/orion-core-desktop/releases/download/v${CORE_DESKTOP_VERSION}/ORION-Core-Setup-${CORE_DESKTOP_VERSION}.exe`
 const TRANSFER_RELEASE_DEFAULT = `https://github.com/oriononevision/orion-transfer-desktop/releases/download/v${TRANSFER_DESKTOP_VERSION}/ORION-Transfer-Setup-${TRANSFER_DESKTOP_VERSION}.exe`
